@@ -1,5 +1,5 @@
-# EmotionDetection
-Detects a person's emotions from facial patterns and speech to output a composite emotion index
+# Girlfriend Emotion Detection
+Detects my girlfriend's emotions from facial patterns using a image CNN and outputs the emotive result live.  
 
 ## Overview
 
