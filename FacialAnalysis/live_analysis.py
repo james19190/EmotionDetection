@@ -10,9 +10,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # load model
-model = load_model('FacialAnalysis/best_model.h5')
-
-# model = load_model("best_model.h5")
+model = load_model('FacialAnalysis/eunah_model.h5')
 
 
 face_haar_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
@@ -41,7 +39,8 @@ while True:
         # find max indexed array
         max_index = np.argmax(predictions[0])
 
-        emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
+        emotions = ('angry','happy', 'sad')
+        # emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
         predicted_emotion = emotions[max_index]
 
         cv2.putText(test_img, predicted_emotion, (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
